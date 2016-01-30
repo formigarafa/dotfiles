@@ -1,0 +1,6 @@
+[user]
+	email = Rafael Santos
+[push]
+	default = simple
+[core]
+	excludesfile = /home/raf/.gitignore
