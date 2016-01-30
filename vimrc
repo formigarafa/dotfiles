@@ -33,7 +33,8 @@ Plugin 'L9'
 " Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'tpope/vim-rails'
-Plugin 'FuzzyFinder'
+" Plugin 'FuzzyFinder'
+Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
