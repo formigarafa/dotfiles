@@ -18,6 +18,7 @@ make && \
 sudo make install
 
 # all
+git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
 rcup -v
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
