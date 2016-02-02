@@ -18,7 +18,7 @@ make && \
 sudo make install
 
 # all
-apt-get install vim-nox
+apt-get install vim-nox ruby-dev
 git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
 rcup -v
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
