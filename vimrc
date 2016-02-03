@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+filetype on                   " to fix a wierd behaviour usin vi on mac. (not being able to commit)
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
