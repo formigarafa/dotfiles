@@ -116,7 +116,7 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-eval `keychain --eval --agents ssh id_rsa`
+eval $(keychain --eval --inherit any id_rsa ora_id_rsa)
 
 export PATH="$HOME/.bin:$PATH"
 eval "$(hub alias -s)"
