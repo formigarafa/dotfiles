@@ -113,6 +113,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 eval `keychain --eval --agents ssh id_rsa`
 
 export PATH="$HOME/.bin:$PATH"
