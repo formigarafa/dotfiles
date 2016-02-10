@@ -69,7 +69,11 @@ command W w !sudo tee % > /dev/null
 syntax enable
 set encoding=utf8
 filetype plugin indent on
+
+set t_Co=256
+let g:molokai_original = 1
 colorscheme molokai
+
 set number
 set numberwidth=5
 
