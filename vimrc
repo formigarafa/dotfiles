@@ -60,6 +60,10 @@ filetype plugin indent on    " required
 set backspace=indent,eol,start
 
 set ruler
+set nowrap
+set expandtab " spaces when press tab
+set tabstop=2 " insert 2 spaces when tab pressed
+set shiftwidth=2 " insert 2 spaces for identation
 
 command W w !sudo tee % > /dev/null
 syntax enable
