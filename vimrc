@@ -36,6 +36,10 @@ Plugin 'L9'
 Plugin 'tpope/vim-rails'
 " Plugin 'FuzzyFinder'
 Plugin 'wincent/command-t'
+Plugin 'scrooloose/nerdTree'
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+" Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,5 +62,11 @@ set backspace=indent,eol,start
 set ruler
 
 command W w !sudo tee % > /dev/null
+syntax enable
+set encoding=utf8
+filetype plugin indent on
+colorscheme molokai
+set number
+set numberwidth=5
 
 
