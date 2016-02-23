@@ -73,4 +73,5 @@ colorscheme molokai
 set number
 set numberwidth=5
 
+set guifont=Menlo:h14
 
