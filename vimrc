@@ -37,6 +37,7 @@ Plugin 'tpope/vim-rails'
 " Plugin 'FuzzyFinder'
 Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdTree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 " Plugin 'airblade/vim-gitgutter'
@@ -69,7 +70,11 @@ command W w !sudo tee % > /dev/null
 syntax enable
 set encoding=utf8
 filetype plugin indent on
+
+set t_Co=256
+let g:molokai_original = 1
 colorscheme molokai
+
 set number
 set numberwidth=5
 

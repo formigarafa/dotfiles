@@ -8,6 +8,10 @@ case $- in
       *) return;;
 esac
 
+case "$TERM" in
+  xterm*) TERM=xterm-256color
+esac 
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -118,8 +122,8 @@ export EDITOR="$VISUAL"
 
 eval $(keychain --eval --inherit any id_rsa ora_id_rsa)
 
-export PATH="$HOME/.bin:$PATH"
 eval "$(hub alias -s)"
+export PATH=~/.npm-global/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
