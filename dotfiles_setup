@@ -3,7 +3,8 @@ brew tap thoughtbot/formulae
 brew install rcm
 
 # linux
-apt-get install -y git-core curl build-essentials
+apt-get install -y git-core curl build-essential
+apt-get install -y ruby-dev vim-gtk # or vim-nox
 curl -LO https://thoughtbot.github.io/rcm/dist/rcm-1.3.0.tar.gz && \
 \
 sha=$(sha256sum rcm-1.3.0.tar.gz | cut -f1 -d' ') && \
@@ -17,7 +18,6 @@ make && \
 sudo make install
 
 # all
-apt-get install vim-nox ruby-dev
 git clone git@github.com:formigarafa/dotfiles.git ~/.dotfiles
 rcup -v
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
