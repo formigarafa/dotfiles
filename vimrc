@@ -40,6 +40,7 @@ Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
