@@ -42,6 +42,7 @@ Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'majutsushi/tagbar'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -79,12 +80,15 @@ colorscheme molokai
 
 let g:airline_powerline_fonts = 1
 
+nmap <F8> :TagbarToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+
 set number
 set numberwidth=5
 
 "install fonts: https://github.com/hbin/top-programming-fonts
+set guifont=Sauce\ Code\ Pro\ 10
 "set guifont=Menlo\ 10,Menlo:h14
-"set guifont=xMenloiii
 "set guifontset=Menlo
 "\ 14
 
