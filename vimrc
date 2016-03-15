@@ -41,6 +41,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'ryanoasis/vim-devicons'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -76,8 +77,14 @@ set t_Co=256
 let g:molokai_original = 1
 colorscheme molokai
 
+let g:airline_powerline_fonts = 1
+
 set number
 set numberwidth=5
 
-set guifont=Menlo:h14
+"install fonts: https://github.com/hbin/top-programming-fonts
+"set guifont=Menlo\ 10,Menlo:h14
+"set guifont=xMenloiii
+"set guifontset=Menlo
+"\ 14
 
