@@ -117,6 +117,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
