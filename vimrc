@@ -43,6 +43,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'majutsushi/tagbar'
+Plugin 'leafgarland/typescript-vim'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -92,3 +93,17 @@ set guifont=Sauce\ Code\ Pro\ 10
 "set guifontset=Menlo
 "\ 14
 
+
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
