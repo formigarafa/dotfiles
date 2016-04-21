@@ -44,6 +44,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'majutsushi/tagbar'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'rking/ag.vim'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -80,6 +81,7 @@ let g:molokai_original = 1
 colorscheme molokai
 
 let g:airline_powerline_fonts = 1
+set laststatus=2
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle<CR>
@@ -93,6 +95,7 @@ set guifont=Sauce\ Code\ Pro\ 10
 "set guifontset=Menlo
 "\ 14
 
+set guioptions=aegimt
 
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
