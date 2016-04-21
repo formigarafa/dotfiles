@@ -80,8 +80,9 @@ eval "$(rbenv init - --no-rehash)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
+
+DEFAULT_USER=raf
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
