@@ -60,8 +60,8 @@ HISTSIZE=
 HISTFILESIZE=
 export CLICOLOR=1
 
-#export VISUAL=vim
-#export EDITOR="$VISUAL"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 eval $(keychain --eval --inherit any id_rsa)
 
