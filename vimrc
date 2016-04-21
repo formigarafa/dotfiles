@@ -1,3 +1,4 @@
+
 set nocompatible              " be iMproved, required
 filetype on                   " to fix a wierd behaviour usin vi on mac. (not being able to commit)
 filetype off                  " required
@@ -35,7 +36,8 @@ Plugin 'L9'
 
 Plugin 'tpope/vim-rails'
 " Plugin 'FuzzyFinder'
-Plugin 'wincent/command-t'
+" Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdTree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tomasr/molokai'
@@ -70,6 +72,25 @@ set nowrap
 set expandtab " spaces when press tab
 set tabstop=2 " insert 2 spaces when tab pressed
 set shiftwidth=2 " insert 2 spaces for identation
+
+let mapleader = " "
+set nobackup
+set nowritebackup
+set noswapfile
+set showcmd
+set incsearch
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 command W w !sudo tee % > /dev/null
 syntax enable
