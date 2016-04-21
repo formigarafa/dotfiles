@@ -1,6 +1,36 @@
 # macos
-brew tap thoughtbot/formulae
-brew install rcm
+
+# start with full thoughtbot/laptop
+curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
+
+# check if you want with:
+# less mac
+
+sh mac 2>&1 | tee ~/laptop.log
+
+# dotfiles
+git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
+rcup -v
+
+# running it again, to possibly pick ~/.laptop.local
+sh mac 2>&1 | tee ~/laptop.log
+
+
+# terminal colors
+curl --remote-name https://github.com/lysyi3m/osx-terminal-themes/blob/master/schemes/3024%20Night.terminal
+open 3024%20Night.terminal
+
+# terminal font
+curl --remote-name https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
+
+# terminal settings: manual
+# set default profile
+# shell tab: close if exited cleanly
+# advanced tab: disable audible bell
+# install and select font above (Sauce Code Pro Nerd Font Complete.ttf)
+#
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # linux
 apt-get install -y git-core curl build-essential
