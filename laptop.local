@@ -6,9 +6,12 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make
 
 brew bundle --file=- <<EOF
-brew "keychain"
-brew "direnv"
-brew "diff-so-fancy"
+  brew "keychain"
+  brew "direnv"
+  brew "diff-so-fancy"
+  brew "htop"
+  brew "postgis"
+  brew "nmap"
 EOF
 
 

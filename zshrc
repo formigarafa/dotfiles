@@ -109,4 +109,4 @@ DEFAULT_USER=raf
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
