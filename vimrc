@@ -3,6 +3,7 @@ set nocompatible              " be iMproved, required
 filetype on                   " to fix a wierd behaviour usin vi on mac. (not being able to commit)
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -92,8 +93,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" display extra whitespace (they might be copied to system clipboard using
+" cmd+c)
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 command W w !sudo tee % > /dev/null
 syntax enable
