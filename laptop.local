@@ -14,4 +14,6 @@ brew bundle --file=- <<EOF
   brew "nmap"
 EOF
 
+# pow
+curl get.pow.cx | sh
 
