@@ -92,6 +92,9 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 command W w !sudo tee % > /dev/null
 syntax enable
 set encoding=utf8
@@ -111,10 +114,10 @@ set number
 set numberwidth=5
 
 "install fonts: https://github.com/hbin/top-programming-fonts
-set guifont=Sauce\ Code\ Pro\ 10
-"set guifont=Menlo\ 10,Menlo:h14
-"set guifontset=Menlo
-"\ 14
+" mac
+set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h14
+" linux 
+" set guifont=Sauce\ Code\ Pro\ 10
 
 set guioptions=aegimt
 
@@ -131,3 +134,15 @@ let g:tagbar_type_typescript = {
     \ 'e:enums',
   \ ]
 \ }
+
+" https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
