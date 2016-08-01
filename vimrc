@@ -140,7 +140,7 @@ let g:tagbar_type_typescript = {
 
 " https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity
 nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>w :w<CR>
 vmap <Leader>y "+y
 vmap <Leader>d "+d
