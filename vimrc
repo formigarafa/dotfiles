@@ -110,8 +110,8 @@ colorscheme molokai
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
-nmap <F8> :TagbarToggle<CR>
 nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 set number
 set numberwidth=5
@@ -148,4 +148,11 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
+
+nmap <Leader>1 :NERDTreeToggle<CR>
+nmap <Leader>2 :TagbarToggle<CR>
+
+nnoremap <leader><leader> <c-^>
+
+set mouse=a
 
