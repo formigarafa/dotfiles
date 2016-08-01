@@ -66,18 +66,19 @@ export EDITOR="$VISUAL"
 eval $(keychain --eval --inherit any id_rsa)
 
 eval "$(hub alias -s)"
-# export PATH=~/.npm-global/bin:$PATH
 
-
-export PATH="$HOME/.bin:$PATH"
 
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
-eval "$(rbenv init - --no-rehash)"
 
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$HOME/.bin:$PATH"
+
+eval "$(rbenv init - --no-rehash)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
