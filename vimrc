@@ -74,7 +74,8 @@ set expandtab " spaces when press tab
 set tabstop=2 " insert 2 spaces when tab pressed
 set shiftwidth=2 " insert 2 spaces for identation
 
-let mapleader = " "
+let mapleader = "\\"
+map <space> <Leader>
 set nobackup
 set nowritebackup
 set noswapfile
