@@ -7,3 +7,5 @@ Procfile
 
 .ruby-version
 /tags
+bin/spring
+.DS_Store
