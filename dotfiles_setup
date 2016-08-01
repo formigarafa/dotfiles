@@ -17,7 +17,7 @@ sh mac 2>&1 | tee ~/laptop.log
 
 
 # terminal colors
-curl --remote-name https://github.com/lysyi3m/osx-terminal-themes/blob/master/schemes/3024%20Night.terminal
+curl --remote-name https://raw.githubusercontent.com/lysyi3m/osx-terminal-themes/master/schemes/3024%20Night.terminal
 open 3024%20Night.terminal
 
 # terminal font
