@@ -48,6 +48,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'majutsushi/tagbar'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
