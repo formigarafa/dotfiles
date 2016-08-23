@@ -1,5 +1,5 @@
 # install terminal font
-curl -o https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+curl -o ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
 
 # powerline for tmux and zsh status improvements
 pip install powerline-status
