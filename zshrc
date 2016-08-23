@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/raf/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -86,7 +86,7 @@ eval "$(rbenv init - --no-rehash)"
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_TITLE=true
-DEFAULT_USER=raf
+DEFAULT_USER=`whoami`
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

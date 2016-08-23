@@ -5,7 +5,7 @@ pip install powerline-status
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # oh-my-zsh theme
-git -C ~/oh-my-zsh/custom/themes/powerlevel9k pull || git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull || git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # setting up tmux
 git -C ~/.tmux/plugins/tpm pull || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
