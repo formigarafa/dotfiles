@@ -29,6 +29,7 @@ brew bundle --file=- <<EOF
   brew "htop"
   brew "postgis"
   brew "nmap"
+  brew "m-cli"
 EOF
 
 # pow

@@ -50,6 +50,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
