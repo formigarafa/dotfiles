@@ -35,7 +35,9 @@ Plugin 'L9'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 " Plugin 'FuzzyFinder'
 " Plugin 'wincent/command-t'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -95,6 +97,12 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 " display extra whitespace (they might be copied to system clipboard using
 " cmd+c)
