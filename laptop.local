@@ -30,6 +30,12 @@ brew bundle --file=- <<EOF
   brew "postgis"
   brew "nmap"
   brew "m-cli"
+  cask "google-chrome"
+  # cask "seil"
+  cask "karabiner-elements"
+  cask "iterm2"
+  cask "github-desktop"
+  cask "atom"
 EOF
 
 # pow
