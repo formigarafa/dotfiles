@@ -67,7 +67,7 @@ export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-eval $(keychain --eval --inherit any id_rsa)
+eval $(keychain --eval --inherit any)
 
 eval "$(hub alias -s)"
 
