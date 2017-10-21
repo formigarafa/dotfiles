@@ -9,3 +9,4 @@ Procfile
 /tags
 bin/spring
 .DS_Store
+yarn-error.log
