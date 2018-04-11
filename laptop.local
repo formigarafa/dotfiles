@@ -33,6 +33,7 @@ brew bundle --file=- <<EOF
   brew "postgis"
   brew "nmap"
   brew "m-cli"
+  brew "thefuck"
   cask "google-chrome"
   # cask "seil"
   cask "karabiner-elements"
