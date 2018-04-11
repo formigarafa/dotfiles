@@ -10,7 +10,7 @@ esac
 
 case "$TERM" in
   xterm*) TERM=xterm-256color
-esac 
+esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -117,8 +117,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/.bash-git-prompt/gitprompt.sh
-GIT_PROMPT_ONLY_IN_REPO=1
+function _update_ps1() {
+  PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

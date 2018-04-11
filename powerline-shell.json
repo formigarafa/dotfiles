@@ -1,0 +1,16 @@
+{
+  "segments": [
+    "ssh", 
+    "exit_code",
+    "jobs",
+    "cwd", 
+    "git", 
+    "git_stash"
+  ],
+  "cwd": {
+    "mode": "plain"
+  },
+  "vcs": {
+    "show_symbol": true
+  }
+}
