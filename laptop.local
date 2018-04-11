@@ -4,6 +4,9 @@ curl -o ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf https://raw.g
 # powerline for tmux and zsh status improvements
 pip install powerline-status
 
+# powerline for bash
+pip install powerline-shell
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -40,4 +43,3 @@ EOF
 
 # pow
 curl get.pow.cx | sh
-
