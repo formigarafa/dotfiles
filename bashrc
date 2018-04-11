@@ -133,13 +133,22 @@ export EDITOR="$VISUAL"
 eval $(keychain --quiet --quick --eval --inherit any)
 
 eval "$(hub alias -s)"
-export PATH=~/.npm-global/bin:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
+# recommended by brew doctor
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-eval "$(direnv hook bash)"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
+eval $(thefuck --alias)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+eval "$(direnv hook bash)"
