@@ -10,3 +10,8 @@ Procfile
 bin/spring
 .DS_Store
 yarn-error.log
+config/spring.rb
+config/initializers/zz_dev_override.rb
+.nvmrc
+.atom-build.js
+/raf_scripts
