@@ -123,7 +123,7 @@ GIT_PROMPT_ONLY_IN_REPO=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-eval $(keychain --eval --inherit any id_rsa ora_id_rsa)
+eval $(keychain --quiet --quick --eval --inherit any)
 
 eval "$(hub alias -s)"
 export PATH=~/.npm-global/bin:$PATH
