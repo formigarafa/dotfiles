@@ -15,3 +15,4 @@ config/initializers/zz_dev_override.rb
 .nvmrc
 .atom-build.js
 /raf_scripts
+.tool-versions
