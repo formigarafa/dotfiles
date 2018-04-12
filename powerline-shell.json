@@ -12,5 +12,6 @@
   },
   "vcs": {
     "show_symbol": true
-  }
+  },
+  "theme": "~/.powerline_shell_theme.py"
 }
