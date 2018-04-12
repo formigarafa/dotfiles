@@ -1,10 +1,10 @@
 {
   "segments": [
-    "ssh", 
+    "ssh",
     "exit_code",
     "jobs",
-    "cwd", 
-    "git", 
+    "cwd",
+    "git",
     "git_stash"
   ],
   "cwd": {
