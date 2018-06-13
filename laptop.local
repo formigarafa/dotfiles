@@ -24,10 +24,9 @@ brew bundle --file=- <<EOF
   brew "bash-completion"
   brew "puma/puma/puma-dev"
   cask "google-chrome"
-  # cask "seil"
   cask "karabiner-elements"
   cask "iterm2"
-  cask "github-desktop"
+  cask "github"
   cask "atom"
 EOF
 
