@@ -22,6 +22,7 @@ brew bundle --file=- <<EOF
   brew "m-cli"
   brew "thefuck"
   brew "bash-completion"
+  brew "puma/puma/puma-dev"
   cask "google-chrome"
   # cask "seil"
   cask "karabiner-elements"
@@ -30,8 +31,9 @@ brew bundle --file=- <<EOF
   cask "atom"
 EOF
 
-# pow
-curl get.pow.cx | sh
+fancy_echo "Setting up puma-dev"
+sudo puma-dev -setup
+puma-dev -install -d dev:d:test
 
 # powerline for tmux and zsh status improvements
 pip install powerline-status
