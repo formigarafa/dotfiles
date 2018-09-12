@@ -149,7 +149,7 @@ export PATH="$HOME/.bin:$PATH"
 
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
-
+export POWERLINE_REPO_ROOT=$(pip3 show powerline-status | grep '^Location:\s' | cut -f 2 -d' ')
 eval $(thefuck --alias)
 
 eval "$(direnv hook bash)"
