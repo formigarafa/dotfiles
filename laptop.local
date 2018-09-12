@@ -10,9 +10,8 @@ fancy_echo "setting up vim..."
 git -C ~/.vim/bundle/Vundle.vim pull || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-cd ~/.vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make
-
 brew bundle --file=- <<EOF
+  tap "puma/puma"
   brew "keychain"
   brew "direnv"
   brew "diff-so-fancy"
@@ -33,7 +32,7 @@ EOF
 
 fancy_echo "Setting up puma-dev"
 sudo puma-dev -setup
-puma-dev -install -d dev:d:test
+puma-dev -install -d dev
 
 # powerline for tmux and zsh status improvements
 pip3 install powerline-status
