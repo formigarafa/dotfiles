@@ -28,6 +28,7 @@ brew bundle --file=- <<EOF
   cask "iterm2"
   cask "github"
   cask "atom"
+  brew "cmake" # vim youcompleteme
 EOF
 
 fancy_echo "Setting up puma-dev"
@@ -35,7 +36,7 @@ sudo puma-dev -setup
 puma-dev -install -d dev:d:test
 
 # powerline for tmux and zsh status improvements
-pip install powerline-status
+pip3 install powerline-status
 
 # powerline for bash
-pip install powerline-shell
+pip3 install powerline-shell
