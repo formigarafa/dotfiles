@@ -36,6 +36,8 @@ puma-dev -install -d dev
 # this might be required
 # security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
 
+# comment the following line on /etc/hosts to avoid issues with ipv6 and rails on puma-dev
+# ::1             localhost
 
 # powerline for tmux and zsh status improvements
 pip3 install powerline-status
