@@ -33,9 +33,17 @@ EOF
 fancy_echo "Setting up puma-dev"
 sudo puma-dev -setup
 puma-dev -install -d dev
+# this might be required
+# security add-trusted-cert -k login.keychain-db ~/Library/Application\ Support/io.puma.dev/cert.pem
+
 
 # powerline for tmux and zsh status improvements
 pip3 install powerline-status
 
 # powerline for bash
 pip3 install powerline-shell
+
+m dock prune
+m dock magnification YES
+m dock autohide YES
+
