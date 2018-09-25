@@ -34,7 +34,8 @@ class Color(DefaultColor):
     GIT_CONFLICTED_BG = 9
     GIT_CONFLICTED_FG = 15
 
-RepoStats.symbols["stash"] = u'\uF01C'
+RepoStats.symbols["stash"] = u'\uF85B'
 RepoStats.symbols["git"] = u'\uF1D3' # git
+RepoStats.symbols["new"] = u'\uF420' # new
 # RepoStats.symbols["git"] = u'\uF113' # github
 
