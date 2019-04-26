@@ -125,7 +125,14 @@ set laststatus=2
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
-set number
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 set numberwidth=5
 
 "install fonts: https://github.com/hbin/top-programming-fonts
