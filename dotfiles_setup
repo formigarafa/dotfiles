@@ -36,8 +36,6 @@ curl --remote-name https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master
 # set Caps Lock Key to "No Action"
 
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # linux
 apt-get install -y git-core curl build-essential
 apt-get install -y ruby-dev vim-gtk # or vim-nox
