@@ -28,6 +28,7 @@ brew bundle --file=- <<EOF
   cask "github"
   cask "atom"
   brew "cmake" # vim youcompleteme
+  brew "nvim"
 EOF
 
 fancy_echo "Setting up puma-dev"
