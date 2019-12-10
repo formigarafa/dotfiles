@@ -6,10 +6,6 @@ git -C ~/.tmux/plugins/tpm pull || git clone https://github.com/tmux-plugins/tpm
 
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-fancy_echo "setting up vim..."
-git -C ~/.vim/bundle/Vundle.vim pull || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
 brew bundle --file=- <<EOF
   tap "puma/puma"
   brew "keychain"
@@ -29,7 +25,13 @@ brew bundle --file=- <<EOF
   cask "atom"
   brew "cmake" # vim youcompleteme
   brew "nvim"
+
+  # cask pgadmin4 gimp skype disk-inventory-x
+  # cask touchswitcher
 EOF
+
+fancy_echo "setting up vim..."
+curl -sLf https://spacevim.org/install.sh | bash
 
 fancy_echo "Setting up puma-dev"
 sudo puma-dev -setup
@@ -49,4 +51,3 @@ pip3 install powerline-shell
 m dock prune
 m dock magnification YES
 m dock autohide YES
-
