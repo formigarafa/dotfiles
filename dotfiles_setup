@@ -1,20 +1,17 @@
 # macos
 
+git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
+ln -fs ~/.dotfiles/laptop.local ~/.laptop.local
+
 # start with full thoughtbot/laptop
 curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
 
-# check if you want with:
+# check/edit if you want with:
 # less mac
+# or
+# vim mac
 
 sh mac 2>&1 | tee ~/laptop.log
-
-# dotfiles
-git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
-rcup -v
-
-# running it again, to possibly pick ~/.laptop.local
-sh mac 2>&1 | tee ~/laptop.log
-
 
 # terminal colors
 curl --remote-name https://raw.githubusercontent.com/lysyi3m/osx-terminal-themes/master/schemes/3024%20Night.terminal
