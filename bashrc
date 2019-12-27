@@ -130,6 +130,7 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export VISUAL=vim
