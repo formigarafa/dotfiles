@@ -18,6 +18,17 @@ sh mac 2>&1 | tee ~/laptop.log
 # Got to Tab Profiles > Text
 # Select Font: "SauceCodePro Nerd Font Mono" and set size to 14
 
+# keyboard setup
+# open preferences keyboard
+# set key repeat to fast
+# set delay until repeat to short
+
+# dock
+# open prefereces > dock
+# set size to 1/4
+# set magnification to 1/2
+# Disable "Show recent applications in Dock"
+
 # go to ttps://pqrs.org/osx/karabiner/seil.html.en download and install Sail
 # open and set keycode for Caps Lock to 109
 # go to System Preferences --> Keyboard --> Modifier Keys
