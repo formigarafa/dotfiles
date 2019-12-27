@@ -10,7 +10,6 @@ brew bundle --file=- <<EOF
   tap "puma/puma"
   brew "keychain"
   brew "direnv"
-  brew "diff-so-fancy"
   brew "htop"
   brew "postgis"
   brew "nmap"
