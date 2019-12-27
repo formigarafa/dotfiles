@@ -24,7 +24,7 @@ brew bundle --file=- <<EOF
   cask "iterm2"
   cask "github"
   cask "atom"
-  brew "cmake" # vim youcompleteme
+  # brew "cmake" # vim youcompleteme
   brew "nvim"
 
   # cask pgadmin4 gimp skype disk-inventory-x
@@ -52,3 +52,4 @@ pip3 install powerline-shell
 m dock prune
 m dock magnification YES
 m dock autohide YES
+
