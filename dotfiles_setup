@@ -13,20 +13,11 @@ curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/ma
 
 sh mac 2>&1 | tee ~/laptop.log
 
-# terminal colors
-curl --remote-name https://raw.githubusercontent.com/lysyi3m/osx-terminal-themes/master/schemes/3024%20Night.terminal
-open 3024%20Night.terminal
+# ITerm2 settings (manual step):
+# Open menu Iterm2 > Preferences
+# Got to Tab Profiles > Text
+# Select Font: "SauceCodePro Nerd Font Mono" and set size to 14
 
-# terminal font
-curl --remote-name https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf
-
-# terminal settings: manual
-# set default profile
-# shell tab: close if exited cleanly
-# advanced tab: disable audible bell
-# install and select font above (Sauce Code Pro Nerd Font Complete.ttf)
-#
-#
 # go to ttps://pqrs.org/osx/karabiner/seil.html.en download and install Sail
 # open and set keycode for Caps Lock to 109
 # go to System Preferences --> Keyboard --> Modifier Keys
