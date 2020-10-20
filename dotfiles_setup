@@ -29,7 +29,6 @@ sh mac 2>&1 | tee ~/laptop.log
 # set magnification to 1/2
 # Disable "Show recent applications in Dock"
 
-
 # tmux caps-lock setup
 # Open Karabiner-Elements
 # Authorize what is required

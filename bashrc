@@ -122,15 +122,6 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-function _update_ps1() {
-  PS1=$(powerline-shell $?)
-}
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
-export BASH_SILENCE_DEPRECATION_WARNING=1
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export VISUAL=vim
@@ -138,19 +129,31 @@ export EDITOR="$VISUAL"
 
 eval $(keychain --quiet --quick --eval --inherit any)
 
-eval "$(hub alias -s)"
+# update path only once outside tmux
+if [[ -z $TMUX ]]; then
+  export PATH="$PATH:/Users/raf/Library/Python/2.7/bin"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+  ### Added by the Heroku Toolbelt
+  export PATH="/usr/local/heroku/bin:$PATH"
 
-# recommended by brew doctor
-export PATH="/usr/local/bin:$PATH"
+  # recommended by brew doctor
+  export PATH="/usr/local/bin:$PATH"
 
-export PATH="$HOME/.bin:$PATH"
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+fi
 
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
-export POWERLINE_REPO_ROOT=$(pip3 show powerline-status | grep '^Location:\s' | cut -f 2 -d' ')
-eval $(thefuck --alias)
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  # GIT_PROMPT_ONLY_IN_REPO=1
+  GIT_PROMPT_FETCH_REMOTE_STATUS=0
+  GIT_PROMPT_IGNORE_SUBMODULES=1
+  GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
+  GIT_PROMPT_THEME=Single_line_Dark
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+# eval $(thefuck --alias)
 
 eval "$(direnv hook bash)"
+
