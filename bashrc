@@ -130,7 +130,7 @@ export EDITOR="$VISUAL"
 eval $(keychain --quiet --quick --eval --inherit any)
 
 # update path only once outside tmux
-if [[ -z $TMUX ]]; then
+#if [[ -z $TMUX ]]; then
   export PATH="$PATH:/Users/raf/Library/Python/2.7/bin"
 
   ### Added by the Heroku Toolbelt
@@ -141,7 +141,7 @@ if [[ -z $TMUX ]]; then
 
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
-fi
+#fi
 
 if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   # GIT_PROMPT_ONLY_IN_REPO=1
