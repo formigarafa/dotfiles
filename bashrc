@@ -127,7 +127,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-eval $(keychain --quiet --quick --eval --inherit any)
+# eval $(keychain --quiet --quick --eval --inherit any)
 
 # update path only once outside tmux
 #if [[ -z $TMUX ]]; then
@@ -148,7 +148,7 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   GIT_PROMPT_FETCH_REMOTE_STATUS=0
   GIT_PROMPT_IGNORE_SUBMODULES=1
   GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
-  GIT_PROMPT_THEME=Custom
+  GIT_PROMPT_THEME=${GIT_PROMPT_THEME:-Custom}
   __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
   source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
