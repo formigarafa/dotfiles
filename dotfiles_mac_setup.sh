@@ -54,7 +54,9 @@ brew "nmap"
 brew "m-cli"
 brew "bash-completion"
 brew "nvim"
+brew "bash-git-prompt"
 brew "gnupg"
+brew "yarn"
 EOF
 
 fancy_echo "Installing Homebrew CASK packages ..."
