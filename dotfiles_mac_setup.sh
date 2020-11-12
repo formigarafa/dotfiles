@@ -54,6 +54,7 @@ brew "nmap"
 brew "m-cli"
 brew "bash-completion"
 brew "nvim"
+brew "gnupg"
 EOF
 
 fancy_echo "Installing Homebrew CASK packages ..."
@@ -104,6 +105,12 @@ puma-dev -install
 
 # comment the following line on /etc/hosts to avoid issues with ipv6 and rails on puma-dev
 # ::1             localhost
+
+fancy_echo "Setting up asdf..."
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 
 fancy_echo "A few adjustments on mac dock"
 m dock prune
