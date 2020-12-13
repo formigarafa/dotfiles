@@ -139,21 +139,25 @@ export EDITOR="$VISUAL"
   # recommended by brew doctor
   export PATH="/usr/local/bin:$PATH"
 
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
+  # source $HOME/.asdf/asdf.sh
+  # source $HOME/.asdf/completions/asdf.bash
 #fi
 
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+# if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   # GIT_PROMPT_ONLY_IN_REPO=1
   GIT_PROMPT_FETCH_REMOTE_STATUS=0
   GIT_PROMPT_IGNORE_SUBMODULES=1
   GIT_PROMPT_SHOW_UNTRACKED_FILES=normal
   GIT_PROMPT_THEME=${GIT_PROMPT_THEME:-Custom}
-  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
-  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+  # __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  #source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+  source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
 # eval $(thefuck --alias)
+
+source "/opt/ros/foxy/setup.bash"
 
 eval "$(direnv hook bash)"
 
