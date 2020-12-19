@@ -158,6 +158,8 @@ fi
 # eval $(thefuck --alias)
 
 source "/opt/ros/foxy/setup.bash"
+source "/home/raf/ros2_ws/install/setup.bash"
+source "/usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash"
 
 eval "$(direnv hook bash)"
 
