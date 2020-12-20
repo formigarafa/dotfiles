@@ -2,8 +2,8 @@
 # linux
 apt-get install -y git-core curl build-essential
 apt-get install -y neovim
-apt-get install -y gcc make perl dkms
-apt-get install -y tmux direnv
+apt-get install -y tmux xclip 
+apt-get install -y direnv
 git clone https://github.com/formigarafa/dotfiles.git ~/.dotfiles
 
 mkdir /home/raf/.SpaceVim.d
@@ -23,3 +23,7 @@ curl -sLf https://spacevim.org/install.sh | bash
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
 curl -o ~/Downloads/Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf
+
+# ros stuff
+apt-get install -y gcc make perl dkms
+
