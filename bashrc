@@ -126,6 +126,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export GTAGSLABEL=pygments
 
 # eval $(keychain --quiet --quick --eval --inherit any)
 

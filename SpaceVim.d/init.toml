@@ -65,3 +65,6 @@ name = "tmux"
 [[layers]]
 name = "VersionControl"
 
+[[layers]]
+name = "gtags"
+gtagslabel = "ctags"
