@@ -62,7 +62,6 @@ EOF
 fancy_echo "Installing Homebrew CASK packages ..."
 brew bundle --file=- <<EOF
 # cask "gpg-suite"
-# cask "karabiner-elements"
 # cask "iterm2"
 # cask "fork"
 # cask "atom"
@@ -138,11 +137,7 @@ cat <<EOF
 # set magnification to 1/2
 # Disable "Show recent applications in Dock"
 
-# tmux caps-lock setup
-# Open Karabiner-Elements
-# Authorize what is required
-# open Karabiner Preferences and add Simple modification: caps_lock -> F18
-# go to "misc" tab and disable "Show icon in menu bar"
+# caps-lock setup
 # go to System Preferences --> Keyboard --> Modifier Keys
 # set Caps Lock Key to "No Action"
 
