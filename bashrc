@@ -139,6 +139,8 @@ export GTAGSLABEL=pygments
 
   # recommended by brew doctor
   export PATH="/usr/local/bin:$PATH"
+  
+  export PATH="$HOME/bin:$PATH"
 
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
@@ -153,6 +155,8 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
   source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
+
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # eval $(thefuck --alias)
 
