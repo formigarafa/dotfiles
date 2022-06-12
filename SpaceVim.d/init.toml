@@ -8,6 +8,7 @@
 
 # All SpaceVim option below [option] section
 [options]
+    bootstrap_before = 'myspacevim#before'
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
@@ -31,6 +32,10 @@ auto-completion-return-key-behavior = "complete"
 # auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
+name = 'core#banner'
+enable = false
+
+[[layers]]
 name = "colorscheme"
 
 [[layers]]
@@ -40,12 +45,17 @@ default_height = 30
 
 [[layers]]
 name = 'lang#ruby'
+enabled_linters = ['rubocop']
+
+[[custom_plugins]]
+repo = 'vim-ruby/vim-ruby'
+merged = false
 
 # [[layers]]
 # name = "lang#javascript"
 
 [[layers]]
-name = "unite"
+name = "fzf"
 
 [[layers]]
 name = 'lang#c'
