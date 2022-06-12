@@ -3,7 +3,6 @@
 
 .envrc
 .foreman
-Procfile
 
 .ruby-version
 /tags
