@@ -20,7 +20,7 @@ let mapleader = "'"
 " set spell spelllang=en_us
 
 " visible white spaces
-set listchars=eol:¬,tab:>-,space:.
+set listchars=eol:¬,tab:»\ ,space:.
 set list
 
 " On pressing tab, insert 2 spaces
