@@ -157,6 +157,8 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 fi
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_DEFAULT_OPTS='--layout=reverse'
 
 # eval $(thefuck --alias)
 

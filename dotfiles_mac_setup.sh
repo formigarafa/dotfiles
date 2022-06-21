@@ -57,6 +57,8 @@ brew "nvim"
 brew "bash-git-prompt"
 brew "gnupg"
 brew "yarn"
+
+brew "fd"
 EOF
 
 fancy_echo "Installing Homebrew CASK packages ..."
