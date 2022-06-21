@@ -17,6 +17,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-rails'
 
 " to test
 " mg979/vim-visual-multi
