@@ -24,8 +24,8 @@ call plug#end()
 
 set clipboard=unnamedplus
 set noswapfile
-set completeopt=noinsert,menuone,noselect
-set wildmenu
+" set completeopt=noinsert,menuone,noselect
+" set wildmenu
 set inccommand=split
 set number 
 set updatetime=1000
