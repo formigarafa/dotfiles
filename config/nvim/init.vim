@@ -101,9 +101,6 @@ autocmd VimEnter *
 \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
 " leader d : go to nerdtree on current file
-" nnoremap <leader>d :NERDTreeMirror<CR>:NERDTreeFind<CR>
-nnoremap <leader>D :NERDTreeMirror<CR>:NERDTreeToggle<CR>
-
 nnoremap <Leader>d :call SmartNERDTree()<CR>
 
 fun! s:IsCurrentWindowNERDTree()
