@@ -70,6 +70,8 @@ noremap <Leader>s :w<CR>
 
 " shortcuts
 noremap <Leader>, :e ~/.config/nvim/init.vim<CR>
+noremap <Leader>n :e ~/Desktop/today.txt<CR>
+noremap <Leader>N :e ~/Desktop/vim-notes.txt<CR>
 
 let g:airline_powerline_fonts = 1
 
