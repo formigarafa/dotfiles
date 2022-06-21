@@ -20,9 +20,8 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-rails'
 Plug 'rmagatti/auto-session'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'mg979/vim-visual-multi'
 
-" to test
-" mg979/vim-visual-multi
 call plug#end()
 
 set clipboard=unnamedplus
