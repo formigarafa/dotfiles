@@ -1,39 +1,3 @@
-syntax on
-filetype plugin indent on
-set number 
-set noswapfile
-
-" incremental case-insensitive search with highlight
-set hlsearch
-set ignorecase 
-set incsearch 
-
-" mouse on
-set mouse=a
-
-"" use default leader backslash
-" let mapleader = "\\"
-
-" use leader '
-let mapleader = "'"
-
-" set spell spelllang=en_us
-
-" visible white spaces
-set listchars=eol:¬,tab:»\ ,space:.
-set list
-
-" On pressing tab, insert 2 spaces
-set expandtab
-" show existing tab with 2 spaces width
-set tabstop=2
-set softtabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-
-
-noremap <Leader>, :e ~/.config/nvim/init.vim<CR>
-
 call plug#begin()
 
 Plug 'preservim/nerdtree'
@@ -56,26 +20,63 @@ Plug 'michaeljsmith/vim-indent-object'
 
 " to test
 " mg979/vim-visual-multi
-"
-
 call plug#end()
 
+set clipboard=unnamedplus
+set noswapfile
+set completeopt=noinsert,menuone,noselect
+set wildmenu
+set inccommand=split
+set number 
+set updatetime=1000
+
+" visible white spaces
+set listchars=eol:¬,tab:»\ ,space:.
+set list
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+" set spell spelllang=en_us
+
+" incremental case-insensitive search with highlight
+set hlsearch
+set ignorecase 
+set incsearch 
+
 set termguicolors
-let g:nord_cursor_line_number_background = 1
-let g:nord_uniform_diff_background = 1
 set background=dark
 set cursorline
+
+" mouse on
+set mouse=a
+
 colorscheme onedark
+filetype plugin indent on
+
+" improve keyword matching using %. no need for Plug comes with vim but need
+" to be enabled
+runtime macros/matchit.vim
+
+syntax on
+
+" use leader '
+let mapleader = "'"
+
+" Save in normal and inser mode using <Leader>S
+inoremap <Leader>s <C-\><C-o>:w<CR>
+noremap <Leader>s :w<CR>
+
+" shortcuts
+noremap <Leader>, :e ~/.config/nvim/init.vim<CR>
+
 let g:airline_powerline_fonts = 1
 
 " jk send escape 
 " inoremap jk <ESC>
 " inoremap kj <ESC>
 call arpeggio#map('i', '', 1, 'jk', '<Esc>')
-
-" Save in normal and inser mode using <Leader>S
-inoremap <Leader>s <C-\><C-o>:w<CR>
-noremap <Leader>s :w<CR>
 
 function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
@@ -136,10 +137,6 @@ let g:NERDTreeGitStatusConcealBrackets = 1
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
      \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
-" Start NERDTree when Vim is started without file arguments.
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -147,14 +144,7 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 noremap <Tab> :bn<CR>
 " Shift Tab : go to previous tab
 noremap <S-Tab> :bp<CR>
-" CRTL-W : close tab
-" noremap <C-w> :Bw<CR>
 
 " display git gutter even without git changes
 let g:gitgutter_sign_column_always = 1
-
-" detect changes every 1 second
-set updatetime=1000
-
-runtime macros/matchit.vim
 
