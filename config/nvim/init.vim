@@ -19,6 +19,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-rails'
 Plug 'rmagatti/auto-session'
+Plug 'vim-scripts/AutoComplPop'
 
 " to test
 " mg979/vim-visual-multi
@@ -152,3 +153,17 @@ noremap <S-Tab> :bp<CR>
 " display git gutter even without git changes
 let g:gitgutter_sign_column_always = 1
 
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-y>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
