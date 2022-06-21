@@ -48,7 +48,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-ruby/vim-ruby'
 Plug 'joshdick/onedark.vim'
 Plug 'kana/vim-arpeggio'
-" Plug 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -80,12 +80,19 @@ function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 
-" nmap <Leader>t <Plug>CtrlSFPrompt
-noremap <Leader>f :Ag 
+let g:ctrlsf_auto_close = {"normal" : 0, "compact": 0}
+let g:ctrlsf_auto_focus = {"at": "start"}
+let g:ctrlsf_auto_preview = 1
+let g:ctrlsf_context = '-B 1 -A 2'
+let g:ctrlsf_search_mode = 'async'
+
+nmap <Leader>f <Plug>CtrlSFPrompt
+nmap <Leader>F <Plug>CtrlSFOpen
+vmap <Leader>f <Plug>CtrlSFVwordPath
 
 command FZFP execute 'FZF' s:find_git_root()
 
-" leader f : fuzzy find files in project
+" leader t : fuzzy find files in project
 nnoremap <leader>t :FZFP<CR>
 
 " query, ag options, fzf#run options, fullscreen
