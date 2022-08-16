@@ -9,9 +9,7 @@ fancy_echo() {
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
-    curl -fsS \
-      'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
-
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     export PATH="/usr/local/bin:$PATH"
 fi
 
@@ -28,15 +26,15 @@ brew bundle --file=- <<EOF
 # brew "universal-ctags", args: ["HEAD"]
 
 # Heroku
-tap "heroku/brew"
-brew "heroku/brew/heroku"
+# tap "heroku/brew"
+# brew "heroku/brew/heroku"
 
 tap "puma/puma"
 brew "puma/puma/puma-dev"
 
 brew "git"
 brew "gh"
-brew "imagemagick@6"
+brew "imagemagick"
 
 brew "rcm"
 brew "the_silver_searcher"
@@ -49,14 +47,17 @@ brew "tmux"
 
 brew "direnv"
 brew "htop"
-brew "postgis"
 brew "nmap"
 brew "m-cli"
 brew "bash-completion"
 brew "nvim"
 brew "bash-git-prompt"
+brew "awscli"
 brew "gnupg"
-brew "yarn"
+# brew "postgis" # not needed while using db from docker
+brew "postgresql" # still needed to give access to psql client outside docker
+
+# brew "yarn"
 
 brew "fd"
 EOF
@@ -111,7 +112,7 @@ puma-dev -install
 # ::1             localhost
 
 fancy_echo "Setting up asdf..."
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
@@ -123,6 +124,15 @@ m dock autohide YES
 
 cat <<EOF
 # Last touches
+
+# setup of asgard scripts
+git clone git@github.com:formigarafa/asgard_scripts.git ~/bin
+cd ~/bin
+git submodule init
+git submodule update
+cd ~/bin/aws-configuration
+asdf install
+bundle install
 
 # ITerm2 settings (manual step):
 # Open menu Iterm2 > Preferences
@@ -146,3 +156,5 @@ cat <<EOF
 
 # install xcode to be ready to go
 EOF
+
+##
