@@ -21,6 +21,7 @@ Plug 'tpope/vim-rails'
 Plug 'rmagatti/auto-session'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'mg979/vim-visual-multi'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
