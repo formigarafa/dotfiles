@@ -149,6 +149,8 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 noremap <Tab> :bn<CR>
 " Shift Tab : go to previous tab
 noremap <S-Tab> :bp<CR>
+" leader Tab : close current tab
+noremap <Leader><Tab> :Bw<CR>
 
 " display git gutter even without git changes
 let g:gitgutter_sign_column_always = 1
