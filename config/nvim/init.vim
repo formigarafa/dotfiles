@@ -22,8 +22,12 @@ Plug 'rmagatti/auto-session'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'mg979/vim-visual-multi'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dstein64/nvim-scrollview'
+Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
+
+lua require('neoscroll').setup()
 
 set clipboard=unnamedplus
 set noswapfile
