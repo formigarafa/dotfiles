@@ -4,4 +4,4 @@ alias changed_rb_files="git diff --name-only master | egrep '(\.rb|\.rake|Gemfil
 alias changed_rspec_files="git diff --name-only master | egrep '_spec.rb$'"
 alias rubocop_changes="changed_rb_files | xargs rubocop"
 alias rspec_changes="changed_rspec_files | xargs rspec"
-
+alias tswitch="sh -c '(tmux list-sessions -F \"#S\" 2> /dev/null | grep \$0 > /dev/null || tmux new -s \$0 -c ~/projects/\$0 -d) && ( tmux switch -t \$0 2> /dev/null || tmux a -t \$0 )'"
