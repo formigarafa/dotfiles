@@ -99,8 +99,8 @@ git -C ~/.tmux/plugins/tpm pull || git clone https://github.com/tmux-plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 fancy_echo "setting up vim..."
-# curl -sLf https://spacevim.org/install.sh | bash
 curl -fLo "${HOME}/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
 
 fancy_echo "Setting up puma-dev"
 sudo puma-dev -setup
