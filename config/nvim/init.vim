@@ -23,6 +23,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dstein64/nvim-scrollview'
 Plug 'karb94/neoscroll.nvim'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
