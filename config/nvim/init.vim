@@ -27,6 +27,7 @@ Plug 'karb94/neoscroll.nvim'
 call plug#end()
 
 lua require('neoscroll').setup()
+lua require('auto-session').setup()
 
 set clipboard=unnamedplus
 set noswapfile
@@ -69,8 +70,11 @@ runtime macros/matchit.vim
 
 syntax on
 
-" use leader '
-let mapleader = "'"
+" default leader \ uncomment below use ' as leader
+" let mapleader = "'"
+
+" also use space as leader
+map <space> <Leader>
 
 " Save in normal and inser mode using <Leader>S
 inoremap <Leader>s <C-\><C-o>:w<CR>
@@ -140,6 +144,8 @@ let NERDTreeDirArrows = 1
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusConcealBrackets = 1
+
+let g:buffet_powerline_separators = 1
 
 " If another buffer tries to replace NERDTree, put it in the other window, and
 " bring back NERDTree.
