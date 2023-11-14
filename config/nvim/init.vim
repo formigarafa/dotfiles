@@ -7,11 +7,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'bagrat/vim-buffet'
-Plug 'airblade/vim-gitgutter' 
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'vim-ruby/vim-ruby'
 Plug 'joshdick/onedark.vim'
-Plug 'kana/vim-arpeggio'
 Plug 'dyng/ctrlsf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
@@ -34,8 +33,10 @@ set noswapfile
 " set completeopt=noinsert,menuone,noselect
 " set wildmenu
 set inccommand=split
-set number 
+set number
 set updatetime=1000
+set nowrap
+"set paste # never use this: it breaks shortcuts using <tab>
 
 " visible white spaces
 set listchars=eol:¬,tab:»\ ,space:.
@@ -49,8 +50,8 @@ set shiftwidth=2
 
 " incremental case-insensitive search with highlight
 set hlsearch
-set ignorecase 
-set incsearch 
+set ignorecase
+set incsearch
 
 set termguicolors
 set background=dark
@@ -82,10 +83,9 @@ noremap <Leader>N :e ~/Desktop/vim-notes.txt<CR>
 
 let g:airline_powerline_fonts = 1
 
-" jk send escape 
-" inoremap jk <ESC>
-" inoremap kj <ESC>
-call arpeggio#map('i', '', 1, 'jk', '<Esc>')
+" jk send escape
+inoremap jk <ESC>
+inoremap kj <ESC>
 
 function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
@@ -118,7 +118,7 @@ fun! s:IsCurrentWindowNERDTree()
   return exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) == winnr()
 endfun
 
-function! SmartNERDTree()                   
+function! SmartNERDTree()
   if @% == ""
     if exists("g:NERDTree") && g:NERDTree.IsOpen()
       NERDTreeToggle
@@ -132,7 +132,7 @@ function! SmartNERDTree()
       NERDTreeFind
     endif
   endif
-endfun 
+endfun
 
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
