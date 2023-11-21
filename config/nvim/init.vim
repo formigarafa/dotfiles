@@ -10,7 +10,7 @@ Plug 'bagrat/vim-buffet'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'vim-ruby/vim-ruby'
-Plug 'joshdick/onedark.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'dyng/ctrlsf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
@@ -23,12 +23,12 @@ Plug 'mg979/vim-visual-multi'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dstein64/nvim-scrollview'
 Plug 'karb94/neoscroll.nvim'
-Plug 'github/copilot.vim'
 
 call plug#end()
 
 lua require('neoscroll').setup()
 lua require('auto-session').setup()
+lua require('catppuccin').setup({flavour = 'mocha'})
 
 set clipboard=unnamedplus
 set noswapfile
@@ -62,7 +62,8 @@ set cursorline
 " mouse on
 set mouse=a
 
-colorscheme onedark
+" colorscheme onedark
+colorscheme catppuccin
 filetype plugin indent on
 
 " improve keyword matching using %. no need for Plug comes with vim but need
@@ -87,6 +88,8 @@ noremap <Leader>n :e ~/Desktop/today.txt<CR>
 noremap <Leader>N :e ~/Desktop/vim-notes.txt<CR>
 
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'catppuccin'
+let g:airline#extensions#tabline#enabled = 1
 
 " jk send escape
 inoremap jk <ESC>

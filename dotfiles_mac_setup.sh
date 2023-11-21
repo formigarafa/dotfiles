@@ -91,7 +91,7 @@ rcup -v
 
 # install terminal font
 fancy_echo "downloading terminal nerd-font..."
-curl -o ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono.ttf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf
+curl -o ~/Library/Fonts/SauceCodeProNerdFont-Regular.ttf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Regular/SauceCodeProNerdFont-Regular.ttf
 
 # setting up tmux
 fancy_echo "setting up tmux..."
